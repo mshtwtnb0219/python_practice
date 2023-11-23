@@ -1,3 +1,7 @@
+#ランダムな整数を生成するためにrandomモジュールをインポート
+import random
+
+
 age = 18 #年齢　コメントは#で記載する
 
 if age < 20:
@@ -55,11 +59,81 @@ print(user_dictionary[1])
 #削除
 user_dictionary.pop(2)
 
+# 8章 if分
+num =50
+
+if num < 50:
+    print("aaa")
+elif num < 30:
+    print("sss")
+else:
+    print("aaaaaaa")
+    
+
+#ランダムな整数の生成
+num = random.randrange(0,3)
+print("------------------------")
 
 
+# 9章　繰り返し
+for i in range(1,10):
+    print(i)
+print("------------------------")
+    
+while num != 0:
+    num = random.randrange(0,3)
+    print(num)
+print("------------------------")
+
+#11章
+user_names = ["あああ","いいい","ううう"]
+
+for user_name in user_names:
+    print(user_name)
+    
+    
+data = {1:"あああ",2:"いいい"}
+
+#.items()：辞書からキーと値をセットで取り出す関数
+for key ,value in data.items():
+    print(f"{key} {value}") 
+
+# 配列からの取り出し
+list = ["りんご","ごりら","らっぱ"]
+for i,j in enumerate(list):
+    print(f"{i} {j}")
+    
+# 12章　関数
+def hello():
+    print("お願いします")
+
+hello()
+hello()
 
 
+#　戻り値のヒント
+def double(num) -> int:
+    return num * 2
 
+
+# 15章クラス
+class Product:
+    def __init__(self):
+        #属性を定義
+        self.name = ""
+    def set_name(self,name):
+        self.name = name
+        
+
+#インスタンス化
+pc = Product()
+
+#属性にアクセスする
+pc.name = "インテル"
+print(pc.name)
+
+pc.set_name("ああ")
+print(pc.name)
 
 
 
